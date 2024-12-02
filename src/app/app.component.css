@@ -1,0 +1,105 @@
+/* Estilo general para el contenedor principal */
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrar verticalmente en toda la pantalla */
+    background: linear-gradient(to bottom right, #007bff, #00bcd4); /* Degradado suave de azul */
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Tipografía elegante */
+    color: #333;
+    overflow: hidden; /* Evita que el logo se salga de la pantalla */
+    position: relative; /* Necesario para posicionar el logo */
+  }
+  
+  /* Animación para el logo */
+  .logo {
+    position: absolute;
+    width: 100px; /* Tamaño del logo */
+    height: 100px;
+    background-image: url('./././../../public/logo.png'); /* Ruta de tu logo */
+    background-size: cover;
+    animation: bounceLogo 10s linear infinite; /* Animación continua */
+  }
+  
+  /* Animación de rebote */
+  @keyframes bounceLogo {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    25% {
+      top: 0;
+      left: 90%; /* Se mueve a la derecha */
+    }
+    50% {
+      top: 90%; /* Se mueve hacia abajo */
+      left: 90%;
+    }
+    75% {
+      top: 90%;
+      left: 0; /* Se mueve hacia la izquierda */
+    }
+    100% {
+      top: 0; /* Vuelve a la parte superior */
+      left: 0;
+    }
+  }
+  
+  /* Estilo para el título */
+  .welcome-message h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  /* Estilo para el párrafo */
+  .welcome-message p {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  /* Estilo para el botón */
+  button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* Efecto al pasar el ratón sobre el botón */
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  /* Estilo para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .welcome-message h1 {
+      font-size: 2.5rem;
+    }
+    .welcome-message p {
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+    }
+  }
+  
